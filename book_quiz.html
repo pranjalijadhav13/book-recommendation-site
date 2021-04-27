@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<head>    
+    <title>BOOK QUIZ</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes"> 
+    
+
+</head>
+<section class="forms">
+<body>
+<title>Know more about you</title>
+
+<form>
+
+<!--–– Marathi google code        start-–--> 
+<!--–– Marathi google code End-–--> 
+<!-- Added Refresh   -->
+
+
+<!--  <div id="div1"><h2>Let jQuery AJAX Change This Text</h2></div>-->
+
+
+<!-- End Refresh   -->
+<div class="input-group">
+	<table width="100%" border="0" cellspacing="1" cellpadding="1" class="tableg">
+  <tbody><tr>
+    <td class="headtile" colspan="2"> </td>
+  </tr>
+  <tr>
+    <td colspan="2" bgcolor="#e0f0e8" align="center"><strong> Quiz to know more about you!!&nbsp;&nbsp;&nbsp;</strong></td>
+  </tr>
+  
+<tr></tr>
+
+
+<tr class="qsttr">
+
+    <td width="10px">1</td>
+    
+		<td> What is your favourite Novel Genre? </td>
+				
+  </tr>
+ 
+    <tr><td>&nbsp;</td>
+	
+    <td><input type="hidden" name="What is your favourite Novel Genre?" id="mcq_" value="none selected" checked=""> 	</td>
+
+  </tr><tr>
+  
+    <td>&nbsp;</td>
+	
+	    <td><input type="radio" name="What is your favourite Novel Genre?" id="mcq_" value="Horror"> 
+	
+	 (A)       Horror</td>
+</tr>
+	
+ <tr>
+    <td>&nbsp;</td>
+	
+    <td><input type="radio" name="What is your favourite Novel Genre?" id="mcq_" value="Sci-fi"> 
+	 (B)       Sci-fi</td>
+</tr>
+<tr>
+    <td>&nbsp;</td>
+	
+    <td><input type="radio" name="What is your favourite Novel Genre?" id="mcq_" value="Fiction"> 
+	(C)        Fiction</td>
+</tr>
+    <tr>
+    <td>&nbsp;</td>
+	
+    <td><input type="radio" name="What is your favourite Novel Genre?" id="mcq_" value="Romance"> 
+	
+	(D)       Romance</td>
+</tr>
+
+<tr> </tr>
+
+
+
+<tr class="qsttr">
+
+    <td width="10px">2</td>
+    
+		<td> Who is your favourite author among the following? </td>
+				
+  </tr>
+ 
+    <tr><td>&nbsp;</td>
+	
+    <td><input type="hidden" name="Who is your favourite author among the following?" id="mcq_1" value="none selected" checked=""> 	</td>
+
+  </tr><tr>
+  
+    <td>&nbsp;</td>
+	
+	    <td><input type="radio" name="Who is your favourite author among the following? " id="mcq_1" value="J K Rowling"> 
+	
+	 (A)     J K Rowling</td>
+</tr>
+	
+ <tr>
+    <td>&nbsp;</td>
+	
+    <td><input type="radio" name="Who is your favourite author among the following?" id="mcq_1" value="Chetan Bhagat"> 
+	 (B)     Chetan Bhagat</td>
+</tr>
+<tr>
+    <td>&nbsp;</td>
+	
+    <td><input type="radio" name="Who is your favourite author among the following?" id="mcq_1" value="William Shakespeare"> 
+	(C)      William Shakespeare</td>
+</tr>
+    <tr>
+    <td>&nbsp;</td>
+	
+    <td><input type="radio" name="Who is your favourite author among the following? " id="mcq_1" value="Agatha Cristie"> 
+	
+	(D)     Agatha Cristie</td>
+</tr>
+
+<tr> </tr>
+
+
+
+<tr class="qsttr">
+
+    <td width="10px">3</td>
+    
+		<td> Which is your favourite book among these? </td>
+				
+  </tr>
+ 
+    <tr><td>&nbsp;</td>
+	
+    <td><input type="hidden" name="Which is your favourite book among these?" id="mcq_2" value="none selected" checked=""> 	</td>
+
+  </tr><tr>
+  
+    <td>&nbsp;</td>
+	
+	    <td><input type="radio" name="Which is your favourite book among these?" id="mcq_2" value="Harry Potter Series"> 
+	
+	 (A)   Harry Potter Series</td>
+</tr>
+	
+ <tr>
+    <td>&nbsp;</td>
+	
+    <td><input type="radio" name="Which is your favourite book among these?" id="mcq_2" value="Wimpy Kid"> 
+	 (B)     Wimpy Kid</td>
+</tr>
+<tr>
+    <td>&nbsp;</td>
+	
+    <td><input type="radio" name="Which is your favourite book among these?" id="mcq_2" value="Half Girlfriend"> 
+	(C)     Half Girlfriend</td>
+</tr>
+    <tr>
+    <td>&nbsp;</td>
+	
+    <td><input type="radio" name="Which is your favourite book among these?" id="mcq_2" value="Shiva Trilogy"> 
+	
+	(D)     Shiva Trilogy</td>
+</tr>
+
+<tr> </tr>
+
+
+</tbody></table>
+<div class="buttoons">
+ <input type="submit" name="back" value="Back" >
+  
+ <input type="submit" name="next" value="Next"> 
+
+  
+</div>
+
+<div class="clear"></div>
+
+<div class="results">
+  <h2>Form Data</h2>
+  <pre></pre>
+</div>
+
+</div></form></body>
+
+</html>
+<script type="text/javascript">
+	function handleFormSubmit(event) {
+  event.preventDefault();
+  
+  const data = new FormData(event.target);
+  
+  const formJSON = Object.fromEntries(data.entries());
+
+  // for multi-selects, we need special handling
+  //formJSON.snacks = data.getAll('snacks');
+  
+  const results = document.querySelector('.results pre');
+  results.innerText = JSON.stringify(formJSON, null, 2);
+}
+
+const form = document.querySelector('.forms');
+form.addEventListener('submit', handleFormSubmit);
+</script>
+
